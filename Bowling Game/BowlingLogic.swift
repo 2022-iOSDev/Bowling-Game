@@ -9,4 +9,16 @@ import Foundation
 
 class BowlingLogic {
     
+    var finalScore = 0
+    
+    // Call this for every fresh roll.
+    func roll(_ pinCount: Int) {
+        finalScore = finalScore + pinCount
+    }
+    
+    
+    // Call this to calculate the total score after completing all the rolls.
+    func calculateScore() -> Int{
+        return finalScore
+    }
 }
