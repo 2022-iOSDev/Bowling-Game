@@ -9,20 +9,39 @@ import XCTest
 @testable import Bowling_Game
 
 class Bowling_GameTests: XCTestCase {
+    
+    var bowlingInstance: BowlingLogic!
+    
+    // Arrange
+    override func setUp() {
+        super.setUp()
+        bowlingInstance = BowlingLogic()
+    }
 
+    func multipleRolling(pinCount: Int, times: Int) {
+        for _ in 1...times {
+            bowlingInstance.roll(pinCount)
+        }
+    }
+    
+    
+    
     // 1. Gutter game test
     func testGutter() {
         
-        // Arrange
-        let bowlingInstance = BowlingLogic()
+        multipleRolling(pinCount: 0, times: 20)
         
-        // Act
-        for _ in 1...20 {
-            bowlingInstance.roll(0)
-        }
-        
-        // Assert
         XCTAssertEqual(bowlingInstance.calculateScore(), 0)
     }
+    
+    // 2. Test all ones
+    func testAllOnes() {
+        
+        multipleRolling(pinCount: 1, times: 20)
+        
+        XCTAssertEqual(bowlingInstance.calculateScore(), 20)
+    }
+    
+    
 
 }
