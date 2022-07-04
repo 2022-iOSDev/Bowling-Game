@@ -16,6 +16,7 @@
 		2F595BC028732C7600241776 /* Bowling_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BBF28732C7600241776 /* Bowling_GameTests.swift */; };
 		2F595BCA28732C7600241776 /* Bowling_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BC928732C7600241776 /* Bowling_GameUITests.swift */; };
 		2F595BCC28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BCB28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift */; };
+		2F595BDB287332AA00241776 /* BowlingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BDA287332AA00241776 /* BowlingLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2F595BC528732C7600241776 /* Bowling GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bowling GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F595BC928732C7600241776 /* Bowling_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowling_GameUITests.swift; sourceTree = "<group>"; };
 		2F595BCB28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowling_GameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F595BDA287332AA00241776 /* BowlingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				2F595BA828732C6D00241776 /* AppDelegate.swift */,
 				2F595BAA28732C6D00241776 /* SceneDelegate.swift */,
 				2F595BAC28732C6E00241776 /* ViewController.swift */,
+				2F595BDA287332AA00241776 /* BowlingLogic.swift */,
 				2F595BAE28732C6E00241776 /* Main.storyboard */,
 				2F595BB128732C7500241776 /* Assets.xcassets */,
 				2F595BB328732C7500241776 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F595BAD28732C6E00241776 /* ViewController.swift in Sources */,
+				2F595BDB287332AA00241776 /* BowlingLogic.swift in Sources */,
 				2F595BA928732C6D00241776 /* AppDelegate.swift in Sources */,
 				2F595BAB28732C6D00241776 /* SceneDelegate.swift in Sources */,
 			);
