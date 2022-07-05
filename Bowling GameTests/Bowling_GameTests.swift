@@ -51,13 +51,27 @@ class Bowling_GameTests: XCTestCase {
     // 3. Test a spare
     func testSingleSpare() {
         
-        rollSpare() // Spare
+        rollSpare()
         bowlingInstance.roll(2)
         multipleRolling(pinCount: 0, times: 17)
         
         XCTAssertEqual(bowlingInstance.calculateScore(), 14)
     }
-
     
+    // Roll a strike
+    private func rollStrike() {
+        bowlingInstance.roll(10)
+    }
+
+    // 4. Test a strike
+    func testOneStrike() {
+        
+        rollStrike()
+        bowlingInstance.roll(3)
+        bowlingInstance.roll(2)
+        multipleRolling(pinCount: 0, times: 16)
+        
+        XCTAssertEqual(bowlingInstance.calculateScore(), 20)
+    }
     
 }

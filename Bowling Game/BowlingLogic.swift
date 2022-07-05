@@ -26,9 +26,12 @@ class BowlingLogic {
         var score = 0
         var roll = 0
         for _ in 1...10 {
-            // If spare
-            if isSpare(roll: roll) {
-                score += 10 + rolls[roll+2]
+            if isStrike(roll) {
+                score += 10 + strikeBonus(roll)
+                roll += 1
+            }
+            if isSpare(roll) {
+                score += 10 + spareBonus(roll)
                 roll += 2
             } else {
                 score += rolls[roll] + rolls[roll+1]
@@ -41,7 +44,24 @@ class BowlingLogic {
     
     
     // Spare check
-    private func isSpare(roll: Int) -> Bool {
+    private func isSpare(_ roll: Int) -> Bool {
         return rolls[roll] + rolls[roll+1] == 10
     }
+    
+    // Strike check
+    private func isStrike(_ roll: Int) -> Bool {
+        return rolls[roll] == 10
+    }
+    
+    // Spare bonus
+    private func spareBonus(_ roll: Int) -> Int {
+        return rolls[roll+2]
+    }
+    
+    // Strike bonus
+    private func strikeBonus(_ roll: Int) -> Int {
+        return rolls[roll+1] + rolls[roll+2]
+    }
+
+    
 }
