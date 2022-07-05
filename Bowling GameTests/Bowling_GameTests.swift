@@ -74,4 +74,24 @@ class Bowling_GameTests: XCTestCase {
         XCTAssertEqual(bowlingInstance.calculateScore(), 20)
     }
     
+    // 5. Test a perfect game
+    func testAllStrike() {
+        
+        multipleRolling(pinCount: 10, times: 12)
+        
+        XCTAssertEqual(bowlingInstance.calculateScore(), 300)
+    }
+    
+    // 6. Test a random game without any strike or spare
+    func testNoSpareOrStrike() {
+        
+        var score = 0
+        for _ in 1...20 {
+            let random = Int.random(in: 1..<5)
+            bowlingInstance.roll(random)
+            score += random
+        }
+        
+        XCTAssertEqual(bowlingInstance.calculateScore(), score)
+    }
 }
