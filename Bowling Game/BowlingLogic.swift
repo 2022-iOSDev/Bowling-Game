@@ -29,8 +29,7 @@ class BowlingLogic {
             if isStrike(roll) {
                 score += 10 + strikeBonus(roll)
                 roll += 1
-            }
-            if isSpare(roll) {
+            } else if isSpare(roll) {
                 score += 10 + spareBonus(roll)
                 roll += 2
             } else {
