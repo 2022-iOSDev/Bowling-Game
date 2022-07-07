@@ -11,12 +11,16 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var rollTextfield: UITextField!
+    @IBOutlet weak var rollButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        rollButton.createBorderShadow()
     }
 
-
+    @IBAction func rollButtonPressed(_ sender: Any) {
+    }
+    
 }
 

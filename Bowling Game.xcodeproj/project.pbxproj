@@ -17,6 +17,7 @@
 		2F595BCA28732C7600241776 /* Bowling_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BC928732C7600241776 /* Bowling_GameUITests.swift */; };
 		2F595BCC28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BCB28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift */; };
 		2F595BDB287332AA00241776 /* BowlingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F595BDA287332AA00241776 /* BowlingLogic.swift */; };
+		2FE0C49F2877382C00AB48B6 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0C49E2877382C00AB48B6 /* UIView+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2F595BC928732C7600241776 /* Bowling_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowling_GameUITests.swift; sourceTree = "<group>"; };
 		2F595BCB28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowling_GameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F595BDA287332AA00241776 /* BowlingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingLogic.swift; sourceTree = "<group>"; };
+		2FE0C49E2877382C00AB48B6 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		2F595BA728732C6D00241776 /* Bowling Game */ = {
 			isa = PBXGroup;
 			children = (
+				2FE0C49D287737F200AB48B6 /* Extensions */,
 				2F595BA828732C6D00241776 /* AppDelegate.swift */,
 				2F595BAA28732C6D00241776 /* SceneDelegate.swift */,
 				2F595BAC28732C6E00241776 /* ViewController.swift */,
@@ -128,6 +131,14 @@
 				2F595BCB28732C7600241776 /* Bowling_GameUITestsLaunchTests.swift */,
 			);
 			path = "Bowling GameUITests";
+			sourceTree = "<group>";
+		};
+		2FE0C49D287737F200AB48B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FE0C49E2877382C00AB48B6 /* UIView+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				2F595BDB287332AA00241776 /* BowlingLogic.swift in Sources */,
 				2F595BA928732C6D00241776 /* AppDelegate.swift in Sources */,
 				2F595BAB28732C6D00241776 /* SceneDelegate.swift in Sources */,
+				2FE0C49F2877382C00AB48B6 /* UIView+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
