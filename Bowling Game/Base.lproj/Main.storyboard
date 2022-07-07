@@ -58,21 +58,40 @@
                                     <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28n-3j-yVN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ke-i3-lUB">
+                                <rect key="frame" x="36" y="772" width="342" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2JL-bw-IZF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Calculate score">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateScorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cc-YT-NsF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ke-i3-lUB" secondAttribute="bottom" constant="50" id="3eY-XB-G6E"/>
                             <constraint firstItem="Mqd-fV-hsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BJl-VO-U8I"/>
                             <constraint firstItem="GnX-Qn-Vmy" firstAttribute="top" secondItem="Mqd-fV-hsg" secondAttribute="bottom" constant="150" id="DJE-Um-l4m"/>
                             <constraint firstItem="Mqd-fV-hsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IPE-np-Lti"/>
                             <constraint firstItem="WwR-IB-lm0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="NW2-Mh-y4n"/>
                             <constraint firstItem="GnX-Qn-Vmy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oqi-3O-C0z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqd-fV-hsg" secondAttribute="trailing" id="P2d-tf-1aI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ke-i3-lUB" secondAttribute="trailing" constant="36" id="ZBV-Xe-Ss1"/>
                             <constraint firstItem="WwR-IB-lm0" firstAttribute="top" secondItem="GnX-Qn-Vmy" secondAttribute="bottom" constant="36" id="eKC-Fb-OEJ"/>
+                            <constraint firstItem="8ke-i3-lUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="gfP-E7-HFG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WwR-IB-lm0" secondAttribute="trailing" constant="36" id="xiy-bg-6Fu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calculateScoreButton" destination="8ke-i3-lUB" id="B0L-rZ-O0m"/>
                         <outlet property="rollButton" destination="WwR-IB-lm0" id="43E-pc-aGO"/>
                         <outlet property="rollTextfield" destination="GnX-Qn-Vmy" id="I6V-mV-7dG"/>
                     </connections>
