@@ -8,22 +8,25 @@
 import XCTest
 @testable import Bowling_Game
 
-class Bowling_GameTests: XCTestCase {
+final class Bowling_GameTests: XCTestCase {
     
-    var bowlingInstance: BowlingLogic!
+    private var bowlingInstance: BowlingLogic!
     
     // Arrange
     override func setUp() {
         super.setUp()
         bowlingInstance = BowlingLogic()
     }
+    override func tearDown() {
+        bowlingInstance = nil
+        super.tearDown()
+    }
 
-    func multipleRolling(pinCount: Int, times: Int) {
+    private func multipleRolling(pinCount: Int, times: Int) {
         for _ in 1...times {
             bowlingInstance.roll(pinCount)
         }
     }
-    
     
     
     // 1. Gutter game test

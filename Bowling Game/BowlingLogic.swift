@@ -7,10 +7,10 @@
 
 import Foundation
 
-class BowlingLogic {
+final class BowlingLogic {
     
-    var rolls = [Int](repeating: 0, count: 21)
-    var currentRole = 0
+    private var rolls = [Int](repeating: 0, count: 21)
+    private var currentRole = 0
     
     // Call this for every fresh roll.
     func roll(_ pinCount: Int) {
