@@ -69,6 +69,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateScorePressed(_ sender: Any) {
+        
+        let finalScore = viewModel?.calculateScore()
+        scoreLabel.text = String(describing: finalScore!)
+        
+        // Unhiding score title and label
+        scoreTitleLabel.isHidden = false
+        scoreLabel.isHidden = false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
