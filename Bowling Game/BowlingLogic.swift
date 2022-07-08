@@ -9,7 +9,7 @@ import Foundation
 
 final class BowlingLogic {
     
-    var rolls = [Int](repeating: 0, count: 21)
+    private var rolls = [Int](repeating: 0, count: 21)
     private var currentRoll = 0
     
     // Call this for every fresh roll.
@@ -63,4 +63,9 @@ final class BowlingLogic {
     }
 
     
+    // clearing data
+    func clearAll() {
+        rolls = [Int](repeating: 0, count: 21)
+        currentRoll = 0
+    }
 }

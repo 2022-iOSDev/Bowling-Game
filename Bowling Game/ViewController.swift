@@ -48,23 +48,22 @@ class ViewController: UIViewController {
                 if rollScore >= 0 && rollScore <= 10 {
                     // Roll logic
                     viewModel?.roll(rollScore)
+                    
+                    // additional things to be done after roll
                     rollTextfield.text = ""
+                    scoreTitleLabel.isHidden = true
+                    scoreLabel.isHidden = true
+                    
                 } else {
-                    let alert = UIAlertController(title: "Invalid Input", message: "Please enter valid roll score", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    showAlert(title: "Invalid Input", message: "Please enter valid roll score")
                     rollTextfield.text = ""
                 }
             } else {
-                let alert = UIAlertController(title: "Invalid Input", message: "Please enter valid roll score", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                showAlert(title: "Invalid Input", message: "Please enter valid roll score")
                 rollTextfield.text = ""
             }
         } else {
-            let alert = UIAlertController(title: "Roll score is empty", message: "Please enter your roll score", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            showAlert(title: "Roll score is empty", message: "Please enter your roll score")
         }
     }
     
@@ -77,14 +76,21 @@ class ViewController: UIViewController {
         scoreTitleLabel.isHidden = false
         scoreLabel.isHidden = false
         
-        // Clearing out the
-        viewModel?.rolls = [Int](repeating: 0, count: 21)
+        // Clearing out the data
+        viewModel?.clearAll()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         rollTextfield.resignFirstResponder()
         self.view.endEditing(true)
+    }
+    
+    // Alert logic
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
