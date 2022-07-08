@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             // Converting string input to Integer
             if let rollScore: Int = Int(rollTextfield.text!) {
                 // Chec for valid input
-                if rollScore > 0 && rollScore < 10 {
+                if rollScore >= 0 && rollScore <= 10 {
                     // Roll logic
                     viewModel?.roll(rollScore)
                     rollTextfield.text = ""
@@ -76,6 +76,9 @@ class ViewController: UIViewController {
         // Unhiding score title and label
         scoreTitleLabel.isHidden = false
         scoreLabel.isHidden = false
+        
+        // Clearing out the
+        viewModel?.rolls = [Int](repeating: 0, count: 21)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

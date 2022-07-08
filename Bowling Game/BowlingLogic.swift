@@ -9,14 +9,14 @@ import Foundation
 
 final class BowlingLogic {
     
-    private var rolls = [Int](repeating: 0, count: 21)
-    private var currentRole = 0
+    var rolls = [Int](repeating: 0, count: 21)
+    private var currentRoll = 0
     
     // Call this for every fresh roll.
     func roll(_ pinCount: Int) {
         
-        rolls[currentRole] = pinCount
-        currentRole += 1
+        rolls[currentRoll] = pinCount
+        currentRoll += 1
     }
     
     
