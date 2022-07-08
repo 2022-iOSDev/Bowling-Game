@@ -12,3 +12,8 @@ A strike is when the player knocks down all 10 pins on his first try. The bonus 
 
 In the tenth frame a player who rolls a spare or strike is allowed to roll the extra balls to complete the frame. However no more than three balls can be rolled in tenth frame.
 
+# Follow below steps to succesfully run the app
+- Download the source code into your mac
+- Open the project using XCode 13.0
+- Select the desired simulator from the top bar
+- Click Play button in top left corner
