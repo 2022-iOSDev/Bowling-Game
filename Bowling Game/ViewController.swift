@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var rollTextfield: UITextField!
     @IBOutlet weak var rollButton: UIButton!
     @IBOutlet weak var calculateScoreButton: UIButton!
+    @IBOutlet weak var scoreTitleLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
     
     // ViewModel
     var viewModel: BowlingLogic?
@@ -26,6 +30,10 @@ class ViewController: UIViewController {
 
         rollButton.createBorderShadow()
         calculateScoreButton.createBorderShadow()
+        
+        // Initial hiding of score title and label
+        scoreTitleLabel.isHidden = true
+        scoreLabel.isHidden = true
     }
 
     

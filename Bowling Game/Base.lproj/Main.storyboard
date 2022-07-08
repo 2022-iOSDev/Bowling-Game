@@ -34,7 +34,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GnX-Qn-Vmy">
-                                <rect key="frame" x="107" y="244" width="200" height="180"/>
+                                <rect key="frame" x="107" y="194" width="200" height="180"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="4dw-qS-M6X"/>
@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwR-IB-lm0">
-                                <rect key="frame" x="36" y="460" width="342" height="40"/>
+                                <rect key="frame" x="36" y="410" width="342" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="j2K-gB-h7N"/>
@@ -73,20 +73,44 @@
                                     <action selector="calculateScorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cc-YT-NsF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="078-hf-Csh">
+                                <rect key="frame" x="156" y="601" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="agt-id-zP7"/>
+                                    <constraint firstAttribute="width" constant="102" id="sZY-y3-NCx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-Vk-vJy">
+                                <rect key="frame" x="57" y="622" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RdH-yp-Ecc"/>
+                                    <constraint firstAttribute="width" constant="300" id="Uqm-CP-WO0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ke-i3-lUB" secondAttribute="bottom" constant="50" id="3eY-XB-G6E"/>
+                            <constraint firstItem="078-hf-Csh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="86y-m6-NsJ"/>
                             <constraint firstItem="Mqd-fV-hsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BJl-VO-U8I"/>
-                            <constraint firstItem="GnX-Qn-Vmy" firstAttribute="top" secondItem="Mqd-fV-hsg" secondAttribute="bottom" constant="150" id="DJE-Um-l4m"/>
+                            <constraint firstItem="GnX-Qn-Vmy" firstAttribute="top" secondItem="Mqd-fV-hsg" secondAttribute="bottom" constant="100" id="DJE-Um-l4m"/>
                             <constraint firstItem="Mqd-fV-hsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IPE-np-Lti"/>
                             <constraint firstItem="WwR-IB-lm0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="NW2-Mh-y4n"/>
                             <constraint firstItem="GnX-Qn-Vmy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oqi-3O-C0z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqd-fV-hsg" secondAttribute="trailing" id="P2d-tf-1aI"/>
+                            <constraint firstItem="vZp-Vk-vJy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vyp-pK-hAQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ke-i3-lUB" secondAttribute="trailing" constant="36" id="ZBV-Xe-Ss1"/>
                             <constraint firstItem="WwR-IB-lm0" firstAttribute="top" secondItem="GnX-Qn-Vmy" secondAttribute="bottom" constant="36" id="eKC-Fb-OEJ"/>
                             <constraint firstItem="8ke-i3-lUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="gfP-E7-HFG"/>
+                            <constraint firstItem="8ke-i3-lUB" firstAttribute="top" secondItem="vZp-Vk-vJy" secondAttribute="bottom" constant="50" id="k5Q-hA-Lo9"/>
+                            <constraint firstItem="vZp-Vk-vJy" firstAttribute="top" secondItem="078-hf-Csh" secondAttribute="bottom" id="pc0-GD-uzE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WwR-IB-lm0" secondAttribute="trailing" constant="36" id="xiy-bg-6Fu"/>
                         </constraints>
                     </view>
@@ -94,6 +118,8 @@
                         <outlet property="calculateScoreButton" destination="8ke-i3-lUB" id="B0L-rZ-O0m"/>
                         <outlet property="rollButton" destination="WwR-IB-lm0" id="43E-pc-aGO"/>
                         <outlet property="rollTextfield" destination="GnX-Qn-Vmy" id="I6V-mV-7dG"/>
+                        <outlet property="scoreLabel" destination="vZp-Vk-vJy" id="VHX-T8-Z3k"/>
+                        <outlet property="scoreTitleLabel" destination="078-hf-Csh" id="i8s-7M-gIm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
