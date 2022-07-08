@@ -40,6 +40,32 @@ class ViewController: UIViewController {
     // Button Actions
     
     @IBAction func rollButtonPressed(_ sender: Any) {
+        // Check for non-empty input
+        if rollTextfield.text != "" {
+            // Converting string input to Integer
+            if let rollScore: Int = Int(rollTextfield.text!) {
+                // Chec for valid input
+                if rollScore > 0 && rollScore < 10 {
+                    // Roll logic
+                    viewModel?.roll(rollScore)
+                    rollTextfield.text = ""
+                } else {
+                    let alert = UIAlertController(title: "Invalid Input", message: "Please enter valid roll score", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    rollTextfield.text = ""
+                }
+            } else {
+                let alert = UIAlertController(title: "Invalid Input", message: "Please enter valid roll score", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                rollTextfield.text = ""
+            }
+        } else {
+            let alert = UIAlertController(title: "Roll score is empty", message: "Please enter your roll score", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func calculateScorePressed(_ sender: Any) {
